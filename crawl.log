@@ -1,0 +1,114 @@
+ERROR:root:페이지 접근 실패: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF68B906CB5+28821]
+	(No symbol) [0x00007FF68B873840]
+	(No symbol) [0x00007FF68B7155B9]
+	(No symbol) [0x00007FF68B75A48E]
+	(No symbol) [0x00007FF68B75B8E1]
+	GetHandleVerifier [0x00007FF68BC3FCAD+3408013]
+	GetHandleVerifier [0x00007FF68BC5741F+3504127]
+	GetHandleVerifier [0x00007FF68BC4B5FD+3455453]
+	GetHandleVerifier [0x00007FF68B9CBDBB+835995]
+	(No symbol) [0x00007FF68B87EB5F]
+	(No symbol) [0x00007FF68B87A814]
+	(No symbol) [0x00007FF68B87A9AD]
+	(No symbol) [0x00007FF68B86A199]
+	BaseThreadInitThunk [0x00007FFD36E8259D+29]
+	RtlUserThreadStart [0x00007FFD3808AF38+40]
+
+ERROR:root:페이지 접근 실패: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF68B906CB5+28821]
+	(No symbol) [0x00007FF68B873840]
+	(No symbol) [0x00007FF68B7155B9]
+	(No symbol) [0x00007FF68B75A48E]
+	(No symbol) [0x00007FF68B75B8E1]
+	GetHandleVerifier [0x00007FF68BC3FCAD+3408013]
+	GetHandleVerifier [0x00007FF68BC5741F+3504127]
+	GetHandleVerifier [0x00007FF68BC4B5FD+3455453]
+	GetHandleVerifier [0x00007FF68B9CBDBB+835995]
+	(No symbol) [0x00007FF68B87EB5F]
+	(No symbol) [0x00007FF68B87A814]
+	(No symbol) [0x00007FF68B87A9AD]
+	(No symbol) [0x00007FF68B86A199]
+	BaseThreadInitThunk [0x00007FFD36E8259D+29]
+	RtlUserThreadStart [0x00007FFD3808AF38+40]
+
+ERROR:root:페이지 접근 실패: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF68B906CB5+28821]
+	(No symbol) [0x00007FF68B873840]
+	(No symbol) [0x00007FF68B7155B9]
+	(No symbol) [0x00007FF68B75A48E]
+	(No symbol) [0x00007FF68B75B8E1]
+	GetHandleVerifier [0x00007FF68BC3FCAD+3408013]
+	GetHandleVerifier [0x00007FF68BC5741F+3504127]
+	GetHandleVerifier [0x00007FF68BC4B5FD+3455453]
+	GetHandleVerifier [0x00007FF68B9CBDBB+835995]
+	(No symbol) [0x00007FF68B87EB5F]
+	(No symbol) [0x00007FF68B87A814]
+	(No symbol) [0x00007FF68B87A9AD]
+	(No symbol) [0x00007FF68B86A199]
+	BaseThreadInitThunk [0x00007FFD36E8259D+29]
+	RtlUserThreadStart [0x00007FFD3808AF38+40]
+
+ERROR:root:페이지 접근 실패: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF68B906CB5+28821]
+	(No symbol) [0x00007FF68B873840]
+	(No symbol) [0x00007FF68B7155B9]
+	(No symbol) [0x00007FF68B75A48E]
+	(No symbol) [0x00007FF68B75B8E1]
+	GetHandleVerifier [0x00007FF68BC3FCAD+3408013]
+	GetHandleVerifier [0x00007FF68BC5741F+3504127]
+	GetHandleVerifier [0x00007FF68BC4B5FD+3455453]
+	GetHandleVerifier [0x00007FF68B9CBDBB+835995]
+	(No symbol) [0x00007FF68B87EB5F]
+	(No symbol) [0x00007FF68B87A814]
+	(No symbol) [0x00007FF68B87A9AD]
+	(No symbol) [0x00007FF68B86A199]
+	BaseThreadInitThunk [0x00007FFD36E8259D+29]
+	RtlUserThreadStart [0x00007FFD3808AF38+40]
+
+ERROR:root:페이지 접근 실패: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EE8A6CB5+28821]
+	(No symbol) [0x00007FF7EE813840]
+	(No symbol) [0x00007FF7EE6B55B9]
+	(No symbol) [0x00007FF7EE6F98E4]
+	(No symbol) [0x00007FF7EE72F1A9]
+	(No symbol) [0x00007FF7EE729B55]
+	(No symbol) [0x00007FF7EE728C16]
+	(No symbol) [0x00007FF7EE683675]
+	GetHandleVerifier [0x00007FF7EEBDFCAD+3408013]
+	GetHandleVerifier [0x00007FF7EEBF741F+3504127]
+	GetHandleVerifier [0x00007FF7EEBEB5FD+3455453]
+	GetHandleVerifier [0x00007FF7EE96BDBB+835995]
+	(No symbol) [0x00007FF7EE81EB5F]
+	(No symbol) [0x00007FF7EE68201E]
+	GetHandleVerifier [0x00007FF7EEC61148+3937576]
+	BaseThreadInitThunk [0x00007FFD36E8259D+29]
+	RtlUserThreadStart [0x00007FFD3808AF38+40]
+
+ERROR:root:페이지 접근 실패: Message: Can not connect to the Service C:\Program Files\chromedriver.exe
+
+ERROR:root:페이지 접근 실패: Message: Can not connect to the Service C:\Program Files\chromedriver.exe
+
+ERROR:root:페이지 접근 실패: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EE8A6CB5+28821]
+	(No symbol) [0x00007FF7EE813840]
+	(No symbol) [0x00007FF7EE6B55B9]
+	(No symbol) [0x00007FF7EE6FA48E]
+	(No symbol) [0x00007FF7EE6FB8E1]
+	GetHandleVerifier [0x00007FF7EEBDFCAD+3408013]
+	GetHandleVerifier [0x00007FF7EEBF741F+3504127]
+	GetHandleVerifier [0x00007FF7EEBEB5FD+3455453]
+	GetHandleVerifier [0x00007FF7EE96BDBB+835995]
+	(No symbol) [0x00007FF7EE81EB5F]
+	(No symbol) [0x00007FF7EE81A814]
+	(No symbol) [0x00007FF7EE81A9AD]
+	(No symbol) [0x00007FF7EE80A199]
+	BaseThreadInitThunk [0x00007FFD36E8259D+29]
+	RtlUserThreadStart [0x00007FFD3808AF38+40]
+
