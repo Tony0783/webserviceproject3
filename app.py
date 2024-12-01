@@ -12,7 +12,27 @@ from bson import ObjectId
 load_dotenv()  # .env 파일 로드
 
 app = Flask(__name__)
-swagger = Swagger(app)
+swagger = Swagger(app, template={
+    "swagger": "2.0",
+    "info": {
+        "title": "Saramin Crawling API",
+        "description": "API Documentation for Saramin Crawling",
+        "version": "1.0.0"
+    },
+    "securityDefinitions": {
+        "Bearer": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT Bearer token. Example: 'Bearer {token}'"
+        }
+    },
+    "security": [
+        {
+            "Bearer": []
+        }
+    ]
+})
 
 # MongoDB 연결 설정
 MONGODB_URI = os.getenv("MONGODB_URI")
