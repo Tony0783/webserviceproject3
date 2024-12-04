@@ -8,10 +8,13 @@ import jwt
 from datetime import datetime, timedelta
 from functools import wraps
 from bson import ObjectId
+from flask_cors import CORS
 
 load_dotenv()  # .env 파일 로드
 
 app = Flask(__name__)
+CORS(app)  # CORS 설정 추가
+
 swagger = Swagger(app, template={
     "swagger": "2.0",
     "info": {
@@ -41,7 +44,7 @@ db = client.job_data  # job_data 데이터베이스 선택
 jobs_collection = db.jobs  # jobs 컬렉션 선택
 users_collection = db.users  # users 컬렉션 추가
 
-SECRET_KEY = "your_secret_key"
+SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
 
 @app.route('/')
 def home():
@@ -614,4 +617,5 @@ def view_applications(user):
 
 # 서버 실행
 if __name__ == '__main__':
-    app.run(port=int(os.getenv("PORT", 5000)), debug=True)
+    port = int(os.getenv('PORT', 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
