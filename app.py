@@ -12,6 +12,7 @@ from flask_cors import CORS
 
 load_dotenv()  # .env 파일 로드
 
+
 app = Flask(__name__)
 CORS(app)  # CORS 설정 추가
 
@@ -41,14 +42,107 @@ swagger = Swagger(app, template={
 MONGODB_URI = os.getenv("MONGODB_URI")
 client = MongoClient(MONGODB_URI)
 db = client.job_data  # job_data 데이터베이스 선택
-jobs_collection = db.jobs  # jobs 컬렉션 선택
-users_collection = db.users  # users 컬렉션 추가
+
+# 각 컬렉션 선택
+jobs_collection = db.jobs
+users_collection = db.users
+applications_collection = db.applications
+bookmarks_collection = db.bookmarks
+companies_collection = db.companies
+job_categories_collection = db.job_categories
+logs_collection = db.logs
+skills_collection = db.skills
 
 SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
 
 @app.route('/')
 def home():
     return "Saramin Crawling API", 200
+
+# 데이터 삽입 전 존재 여부 확인 후 삽입
+if applications_collection.count_documents({}) == 0:
+    applications_data = [
+        {
+            "_id": ObjectId(),
+            "user_id": ObjectId(),  # 사용자 ID
+            "job_id": ObjectId(),   # 채용 공고 ID
+            "applied_at": datetime.utcnow()
+        },
+    ]
+    applications_collection.insert_many(applications_data)
+
+if bookmarks_collection.count_documents({}) == 0:
+    bookmarks_data = [
+        {
+            "_id": ObjectId(),
+            "user_id": ObjectId(),  # 사용자 ID
+            "job_id": ObjectId(),   # 채용 공고 ID
+            "bookmarked_at": datetime.utcnow()
+        },
+    ]
+    bookmarks_collection.insert_many(bookmarks_data)
+
+if companies_collection.count_documents({}) == 0:
+    companies_data = [
+        {
+            "_id": ObjectId(),
+            "name": "(주)바르존",  # 회사 이름
+            "industry": "IT",
+            "location": "서울",
+            "website": "http://example.com"
+        },
+    ]
+    companies_collection.insert_many(companies_data)
+
+if job_categories_collection.count_documents({}) == 0:
+    job_categories_data = [
+        {
+            "_id": ObjectId(),
+            "name": "개발자",
+            "description": "소프트웨어 개발과 관련된 직무"
+        },
+    ]
+    job_categories_collection.insert_many(job_categories_data)
+
+if jobs_collection.count_documents({}) == 0:
+    jobs_data = [
+        {
+            "_id": ObjectId(),
+            "title": "Product Owner",
+            "company": "(주)바르존",
+            "location": "서울",
+            "category_id": ObjectId(),  # job_categories의 ID 참조
+            "deadline": "12.26(녹)"
+        },
+    ]
+    jobs_collection.insert_many(jobs_data)
+
+if logs_collection.count_documents({}) == 0:
+    logs_data = [
+        {
+            "_id": ObjectId(),
+            "user_id": ObjectId(),  # 사용자 ID
+            "action": "로그인",
+            "timestamp": datetime.utcnow(),
+            "description": "사용자가 로그인했습니다."
+        },
+    ]
+    logs_collection.insert_many(logs_data)
+
+if skills_collection.count_documents({}) == 0:
+    skills_data = [
+        {
+            "_id": ObjectId(),
+            "name": "Python",
+            "level": "Intermediate"
+        },
+        {
+            "_id": ObjectId(),
+            "name": "JavaScript",
+            "level": "Advanced"
+        },
+    ]
+    skills_collection.insert_many(skills_data)
 
 # JWT 인증 미들웨어
 def token_required(f):
