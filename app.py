@@ -231,7 +231,7 @@ def get_jobs():
     company = request.args.get('company')
     title = request.args.get('title')
     page = int(request.args.get('page', 1))  # 페이지 번호, 기본값은 1
-    size = int(request.args.get('size', 10))  # 페이지 크기, 기본값은 10
+    size = int(request.args.get('size', 20))  # 페이지 크기, 기본값은 10
     sort_by = request.args.get('sort_by', 'deadline')  # 정렬 기준 필드, 기본값은 'deadline'
     order = request.args.get('order', 'asc')  # 정렬 방식, 기본값은 '오름차순'
 
